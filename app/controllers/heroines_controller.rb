@@ -77,7 +77,7 @@ class HeroinesController < ApplicationController
   end
 
   private
-  
+  nochange
   def heroine_params
     params.require(:heroine).permit(:name, :super_name, :power_id)
   end
