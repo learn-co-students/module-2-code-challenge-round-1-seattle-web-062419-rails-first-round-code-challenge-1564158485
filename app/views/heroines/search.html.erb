@@ -7,7 +7,7 @@
 <% end %>
 
 <ul>
-  <% @heroines.each do |heroine| %>
+  <% @heroines_matched.each do |heroine| %>
     <li>
       <%= link_to heroine.super_name, heroine_path(heroine) %>
     </li>
