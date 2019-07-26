@@ -6,4 +6,8 @@ class PowersController < ApplicationController
   def show
     @power = Power.find(params[:id])
   end
+
+  get '/search' do
+    byebug
+  end
 end

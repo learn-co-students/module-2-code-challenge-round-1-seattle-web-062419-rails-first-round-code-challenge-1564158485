@@ -3,6 +3,14 @@ class HeroinesController < ApplicationController
     @heroines = Heroine.all
   end
 
+  def search
+    @search_term = Power.all.select {|p| p.name.include?(params[:q])}.first.name
+
+    if params[:q]
+      @heroines_matched = Heroine.all.select {|h| h.power.name == @search_term}
+    end
+  end
+
   def show
     @heroine = Heroine.find(params[:id])
   end
